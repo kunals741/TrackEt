@@ -4,13 +4,13 @@ import com.papaya.tracket.data.local.dao.TransactionDao
 import com.papaya.tracket.data.remote.SupabaseApi
 import javax.inject.Inject
 
-interface MainRepository {
+interface TransactionRepository {
     //todo
 }
 
-class MainRepositoryImpl @Inject constructor(
+class TransactionRepositoryImpl @Inject constructor(
     transactionDao: TransactionDao,
     supabaseApi: SupabaseApi
-) : MainRepository {
+) : TransactionRepository {
     //todo
 }

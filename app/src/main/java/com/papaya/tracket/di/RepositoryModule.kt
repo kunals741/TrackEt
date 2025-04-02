@@ -1,7 +1,7 @@
 package com.papaya.tracket.di
 
-import com.papaya.tracket.domain.MainRepository
-import com.papaya.tracket.domain.MainRepositoryImpl
+import com.papaya.tracket.domain.TransactionRepository
+import com.papaya.tracket.domain.TransactionRepositoryImpl
 import com.papaya.tracket.data.local.dao.TransactionDao
 import com.papaya.tracket.data.remote.SupabaseApi
 import dagger.Module
@@ -19,7 +19,7 @@ object RepositoryModule {
     fun provideMainRepository(
         transactionDao: TransactionDao,
         supabaseApi: SupabaseApi
-    ): MainRepository {
-        return MainRepositoryImpl(transactionDao, supabaseApi)
+    ): TransactionRepository {
+        return TransactionRepositoryImpl(transactionDao, supabaseApi)
     }
 }
