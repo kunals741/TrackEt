@@ -17,6 +17,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField(
+            "String",
+            "SUPABASE_API_KEY",
+            "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0Ymd6YWRvZXJrcGx5eXl4d2Z1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI3MjA1MDMsImV4cCI6MjA1ODI5NjUwM30.sU84C_Hvg7IxTTHsXD6uiJU3-TYwz3g1bVx-rQS8kJw\""
+        )
     }
 
     buildTypes {
@@ -34,6 +40,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 }
 
